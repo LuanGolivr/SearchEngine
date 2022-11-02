@@ -7,11 +7,11 @@ def getTheLinks(urlLink):
     global alreadyCrawled, data
 
     caching = set()
-    current_dict = collections.defaultdict(list)
-    current_dict["link"] = urlLink
-
-    url = urlopen(urlLink)
-    bsobj = soup(url.read(), features="html.parser")
+    try:
+        url = urlopen(urlLink)
+        bsobj = soup(url.read(), features="html.parser")
+    except:
+        return
 
     for contentLink in bsobj.findAll('a'):
         if 'href' in contentLink.attrs and contentLink.attrs['href'] not in caching:
@@ -26,8 +26,21 @@ def getTheLinks(urlLink):
             else:
                 new_link = linkcaught
 
-            alreadyCrawled.add(new_link)
-            caching.add(new_link)
+            alreadyCrawled.append(new_link)
+            caching.add(linkcaught)
+    return
+
+
+def getInfos(urlLink):
+
+    current_dict = collections.defaultdict(list)
+    current_dict["link"] = urlLink
+
+    try:
+        url = urlopen(urlLink)
+        bsobj = soup(url.read(), features="html.parser")
+    except:
+        return
 
     for contentLink in bsobj.findAll('meta'):
         if 'name' in contentLink.attrs and contentLink.attrs['name'] == "description":
@@ -38,23 +51,25 @@ def getTheLinks(urlLink):
 
     contentLink = bsobj.findAll('title')
     current_dict["title"] = contentLink[0].text
-
     data.append(current_dict)
+
     return
 
-start = "https://g1.globo.com/?utm_source=globo.com&utm_medium=header/"
+start = "https://g1.globo.com"
 
 visited = set()
 visited.add(start)
-alreadyCrawled = set()
+
+alreadyCrawled = []
 data = []
 
 getTheLinks(start)
 
-for link in alreadyCrawled:
-    if link not in visited:
-        getTheLinks(link)
-        visited.add(link)
+for i in range(len(alreadyCrawled)):
+    page = alreadyCrawled[i]
+    if page not in visited:
+        getInfos(page)
+        visited.add(page)
 
 
-teste = 0
+
