@@ -1,0 +1,88 @@
+* {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 14px;
+}
+
+body div.headerResult {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+}
+
+a:hover {
+    color: black;
+}
+
+body form input#resultSearchInput {
+    border-radius: 30px;
+    height: 45px;
+    width: 40vw;
+}
+
+.btn-outline-danger{
+    border-radius: 50%;
+    height: 40px;
+}
+
+.bodyResult div{
+    margin-bottom: 15px;
+}
+
+.bodyResult a {
+    color: #4927ff;
+}
+
+.bodyResult a:hover {
+    text-decoration: underline 0.5px;
+}
+
+.bodyResult h6 {
+    color: #0f650a;
+}
+
+.bodyResult ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bodyResult li {
+    float: left;
+}
+
+.bodyResult ul li a {
+    padding-right: 3px;
+    display: block;
+    color: #4927ff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.bodyResult ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/*   PAGINATION */
+
+div#paginationResult {
+    margin-top: 30px;
+}
+
+ul.pagination li a{
+    font-size: 15px;
+}
+
+footer {
+    display: block;
+    height: 100px;
+    width: 100vw;
+    padding: 10px;
+    color: black;
+}

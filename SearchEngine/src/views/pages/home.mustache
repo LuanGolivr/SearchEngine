@@ -1,0 +1,29 @@
+{{>partials/header}}
+        <link rel="stylesheet" href="/css/styleHome.css" >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>My own Search Engine</h1>
+                    <form method="get" action="result">
+                        <input type="search" class="form-control" id="mainSearchInput" placeholder="Type here what you want to search"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter your search term" required />
+                    </form>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-1">
+                                <button type="button" class="btn btn-outline-primary">Search </button>
+                            </div>
+                            <div class="col-1">
+                                <button type="button" class="btn btn-outline-danger">
+                                    <span class="material-symbols-outlined">
+                                        keyboard_voice
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{{>partials/footer}}
