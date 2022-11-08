@@ -4,25 +4,12 @@
     </head>
     <body>
         <div class="container">
-            <div class="row justify-content-start headerResult">
-                <div class="col-3">
-                    <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to home page">My Own Search Engine</a>
-                </div>
-                <div class="col-7">
-                    <form>
-                        <input type="search" class="form-control" id="resultSearchInput" placeholder="Type here what you want to search"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter your search term" required />
-                    </form>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Search by voice">
-                        <span class="material-symbols-outlined">
-                            keyboard_voice
-                        </span>
-                    </button>
-                </div>
-
+            <div id="StandardSearchBar">
+                {{>partials/resultPageSearch}}
             </div>
-            <hr/>
+            <nav id="nav-searchBar">
+                {{>partials/resultPageSearch}}
+            </nav>
 
             <div class="row bodyResult">
                 <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">

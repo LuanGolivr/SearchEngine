@@ -20,6 +20,8 @@ class Page{
 
             this.BeginningEffects();
             this.addMainPageButtonEvents();
+        }else {
+            this.addScrollResultPage();
         }
 
         this.addVoiceButtonEvent();
@@ -78,6 +80,33 @@ class Page{
         */
 
         recognition.start();
+    }
+
+
+    addScrollResultPage(){
+        window.addEventListener('scroll', (e)=>{
+            let scroll_y = window.scrollY;
+            let standardBar = document.querySelector('#StandardSearchBar');
+            let navBar = document.querySelector('#nav-searchBar');
+            
+            if(scroll_y >= 87){
+
+                standardBar.style.opacity = 0;
+                standardBar.style.visibility = 'hidden';
+
+                navBar.style.visibility = 'visible';
+                navBar.style.opacity = 1;
+
+            }else {
+
+                navBar.style.opacity = 0;
+                navBar.style.visibility = 'hidden';
+
+                standardBar.style.visibility = 'visible';
+                standardBar.style.opacity = 1;
+            }
+            
+        });
     }
 }
 

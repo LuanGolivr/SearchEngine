@@ -28,6 +28,30 @@ body form input#resultSearchInput {
     height: 40px;
 }
 
+div#StandardSearchBar {
+    transition: 0.5;
+}
+
+nav#nav-searchBar{
+    position: fixed;
+    top: 0;
+    transition: 0.5s;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+nav#nav-searchBar a {
+    font-size: 18px;
+}
+
+nav#nav-searchBar button.btn-outline-danger {
+    position: fixed;
+    top: 12px;
+    right: 30vw;
+}
+
+
 .bodyResult div{
     margin-bottom: 15px;
 }
