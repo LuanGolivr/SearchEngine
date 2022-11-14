@@ -12,72 +12,13 @@
             </nav>
 
             <div class="row bodyResult">
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="www.testing.com.br">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                    <a href="#">Website Title</a>
-                    <h6>www.testing.com.br</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    <ul>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                        <li><a href="#">testing</a></li>
-                    </ul>
-                </div>
-
+                {{#newsList}}
+                    <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
+                        <a href="{{link}}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{link}}">{{title}}</a>
+                        <h6>{{link}}</h6>
+                        <p>{{description}}</p>
+                    </div>
+                {{/newsList}}
             </div>
             
             <div class="row" id="paginationResult">

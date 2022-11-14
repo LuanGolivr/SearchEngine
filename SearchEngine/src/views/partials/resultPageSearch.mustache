@@ -3,8 +3,8 @@
         <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Go to home page">My Own Search Engine</a>
     </div>
     <div class="col-7">
-        <form>
-            <input type="search" class="form-control" id="resultSearchInput" placeholder="Type here what you want to search"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter your search term" required />
+        <form method="get">
+            <input type="search" name="q" class="form-control" id="resultSearchInput" placeholder="Type here what you want to search"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter your search term" value="{{query}}" required />
         </form>
     </div>
     <div class="col-2">

@@ -1,18 +1,9 @@
-import {Router} from 'express';
+import {Router, Request, Response} from 'express';
+import * as mainController from '../controllers/mainController'
 
 const router = Router();
 
-//insert all the routes here bellow
-//router.get('/', controllerhere);
-router.get('/', (req, res)=>{
-
-    res.render('pages/home');
-});
-
-router.get('/result', (req, res)=>{
-    res.render('pages/result');
-});
-
-
+router.get('/', mainController.home);
+router.get('/search', mainController.search);
 
 export default router;

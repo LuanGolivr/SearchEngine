@@ -42,16 +42,6 @@ class Page{
         this.btnSearch.addEventListener('mouseout', (e) =>{
             this.aTAg.style.color = '#0d6efd';
         });
-
-        this.aTAg.addEventListener('mouseup', (e)=>{
-            let inputContent = document.querySelector('input').value;
-
-            if(inputContent != ''){
-                this.aTAg.href = '/result';
-            }else {
-                this.aTAg.href = '';
-            }
-        });
     }
 
     addVoiceButtonEvent(){
