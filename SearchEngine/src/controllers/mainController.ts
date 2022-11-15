@@ -11,12 +11,13 @@ export const search = async (req:Request, res:Response)=>{
     let kwords: string[] = query.split(' ') as string[];
     let newsList;
 
+
     if(query){
 
         kwords = clearWords(kwords);
         newsList = await News.find({
             keywords: { $all: kwords}
-        }).skip(0).limit(10);
+        });
     }
 
     res.render('pages/result', {query, newsList});

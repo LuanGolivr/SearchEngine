@@ -6,6 +6,9 @@ class Page{
 
         this.btnSearch;
         this.aTAg;
+        this.pageBtn;
+        this.hiddenBtn;
+
         
         this.initialize();
     }
@@ -22,6 +25,7 @@ class Page{
             this.addMainPageButtonEvents();
         }else {
             this.addScrollResultPage();
+            this.paginationBtn();
         }
 
         this.addVoiceButtonEvent();
@@ -96,6 +100,17 @@ class Page{
                 standardBar.style.opacity = 1;
             }
             
+        });
+    }
+
+    paginationBtn(){
+        this.pageBtn = document.querySelectorAll('.page');
+        this.hiddenBtn = document.querySelector('.hiddenButton');
+        
+        this.pageBtn.forEach(element => {
+            element.addEventListener('mouseup', (e)=>{
+
+            });
         });
     }
 }
