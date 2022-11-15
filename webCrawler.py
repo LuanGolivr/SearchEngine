@@ -67,7 +67,8 @@ def getInfos(urlLink):
 
     #title
     contentLink = bsobj.findAll('title')
-    current_dict["title"] = contentLink[0].text
+    if contentLink:
+        current_dict["title"] = contentLink[0].text
     data.append(current_dict)
 
     return
@@ -102,7 +103,7 @@ print("primeiro link acessado")
 index = 0
 
 print("entrando no while")
-while index <= 3:
+while index <= 500:
     if allLinks[index] not in visited:
         page = allLinks[index]
         #getTheLinks(page)
